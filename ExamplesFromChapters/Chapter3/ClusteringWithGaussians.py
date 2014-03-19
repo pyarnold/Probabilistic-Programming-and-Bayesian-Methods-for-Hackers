@@ -20,12 +20,12 @@ to a set of parameters, located in the (1,2) arrays `taus` and `centers.`
 
 @pm.deterministic
 def center_i(assignment=assignment, centers=centers):
-        return centers[assignment]
+    return centers[assignment]
 
 
 @pm.deterministic
 def tau_i(assignment=assignment, taus=taus):
-        return taus[assignment]
+    return taus[assignment]
 
 # and to combine it with the observations:
 observations = pm.Normal("obs", center_i, tau_i,
